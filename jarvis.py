@@ -7,7 +7,7 @@ import pygame
 import speech_recognition as sr
 
 # === 🔐 API KEYS ===
-openai.api_key = "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"
+openai.api_key = 
 ELEVENLABS_API_KEY = "sk_8d91639a929dfc2da5b6ead46801d4d7b2905b80c04855ac"
 VOICE_ID = "EXAVITQu4vr4xnSDxMaL"
 
