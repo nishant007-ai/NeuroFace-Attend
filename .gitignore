@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Streamlit cache
+.streamlit/
+.cache/
+
+# Images / temp uploads
+known_faces/
+fine_uploads/
+uploads/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Attendance files (keep local)
+attendance.csv
+absent.csv
