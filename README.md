@@ -8,6 +8,12 @@
 
 ---
 
+## 🌐 **Live Demo**  
+
+🚀 Try it here: **[NeuroFace-Attend (Live on Render)](https://neuroface-attend-3.onrender.com)**  
+
+---
+
 ## 🌟 **What is NeuroFace-Attend?**
 
 **NeuroFace-Attend** is a next-generation, **AI + Machine Learning-powered Face Recognition Attendance System** with an integrated **Voice Assistant 🤖🔊** that talks back to users during attendance.  
@@ -69,7 +75,7 @@ The assistant speaks back using **Text-to-Speech (TTS)** and can even be configu
 
 ---
 
-## 🖥️ **Installation**  
+## 🖥️ **Installation (Local Setup)**  
 
 ```bash
 # 1️⃣ Clone the Repository
