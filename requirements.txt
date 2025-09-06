@@ -1,6 +1,7 @@
 streamlit
-opencv-python
-pillow
+face_recognition
 numpy
-tensorflow
-gTTS
+opencv-python
+pandas
+gtts
+Pillow
