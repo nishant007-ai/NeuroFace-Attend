@@ -22,7 +22,7 @@ if not os.path.exists(ATTENDANCE_FILE):
 # Sidebar selection
 page = st.sidebar.radio("Choose Option", ["📸 Mark Attendance", "📝 Register Student", "📜 History","📕 Fine Clearance"])
 
-# ===================== 👤 Register Student =====================
+# ===================== 📝 Register Student =====================
 if page == "📝 Register Student":
     st.title("📝 Register New Student")
 
@@ -42,20 +42,20 @@ if page == "📝 Register Student":
         image_to_save = None
 
         if uploaded_file is not None:
-            img = Image.open(uploaded_file)
+            img = Image.open(uploaded_file).convert("RGB")
             image_to_save = np.array(img)
         elif webcam_photo is not None:
-            img = Image.open(webcam_photo)
+            img = Image.open(webcam_photo).convert("RGB")
             image_to_save = np.array(img)
 
         if image_to_save is not None:
             face_locations = face_recognition.face_locations(image_to_save)
-            face_encodings = face_recognition.face_encodings(image_to_save)
+            face_encodings = face_recognition.face_encodings(image_to_save, face_locations)
 
             if face_encodings:
                 new_encoding = face_encodings[0]
 
-                # Check against known encodings
+                # Check for duplicate face
                 known_encodings = []
                 known_names = []
 
@@ -74,7 +74,7 @@ if page == "📝 Register Student":
                     existing_file = known_names[matched_index]
                     st.warning(f"⚠️ Face already registered as: {existing_file}")
                 else:
-                    # Save new image
+                    # Save new face image
                     pil_img = Image.fromarray(image_to_save)
                     save_path = os.path.join(KNOWN_FOLDER, f"{name.lower()}_{roll}.jpg")
                     pil_img.save(save_path)
@@ -86,16 +86,13 @@ if page == "📝 Register Student":
     else:
         st.info("✏️ Please fill in both Name and Roll.")
 
-
 # ===================== 📸 Mark Attendance =====================
 elif page == "📸 Mark Attendance":
     st.title("📸 Face Recognition Attendance System")
 
     @st.cache_data
     def load_known_faces():
-        encodings = []
-        names = []
-        rolls = []
+        encodings, names, rolls = [], [], []
         for file in os.listdir(KNOWN_FOLDER):
             if file.endswith(('.jpg', '.png')):
                 try:
@@ -117,20 +114,18 @@ elif page == "📸 Mark Attendance":
 
     known_encodings, known_names, known_rolls = load_known_faces()
 
-    # 📅 Select Lecture Before Marking (Add this where you're marking attendance)
     lecture = st.selectbox("📚 Select Lecture", [
-    "OOMD", "CF", "DB", "CIP", "DAA", "OS", "INS", "MAD", "CDT",
-    "B1-OOMD", "B1-DB", "B1-OS", "B1-CF", "B1-INS",
-    "B2-CF", "B2-OOMD", "B2-DB",
-    "B3-CF", "B3-OOMD", "B3-DB", "B3-OS", "B3-INS",
-    "Practice session", "Mentor"
-])
-
+        "OOMD", "CF", "DB", "CIP", "DAA", "OS", "INS", "MAD", "CDT",
+        "B1-OOMD", "B1-DB", "B1-OS", "B1-CF", "B1-INS",
+        "B2-CF", "B2-OOMD", "B2-DB",
+        "B3-CF", "B3-OOMD", "B3-DB", "B3-OS", "B3-INS",
+        "Practice session", "Mentor"
+    ])
 
     frame = st.camera_input("📸 Take a photo for attendance")
 
     if frame is not None:
-        img = Image.open(frame)
+        img = Image.open(frame).convert("RGB")
         img_np = np.array(img)
 
         face_locations = face_recognition.face_locations(img_np)
@@ -150,7 +145,6 @@ elif page == "📸 Mark Attendance":
                 date = now.strftime('%Y-%m-%d')
                 time = now.strftime('%H:%M:%S')
 
-                # ✅ Write to attendance.csv with lecture info
                 with open(ATTENDANCE_FILE, 'a', newline='') as f:
                     writer = csv.writer(f)
                     writer.writerow([name, roll, date, time, lecture])
@@ -167,6 +161,7 @@ elif page == "📸 Mark Attendance":
     if os.path.exists(ATTENDANCE_FILE):
         with open(ATTENDANCE_FILE, 'r') as f:
             st.download_button("⬇️ Download CSV", f.read(), file_name="attendance.csv")
+
 # ===================== 📸 history =====================
 elif page == "📜 History":
     st.title("📜 Attendance History")

@@ -8,10 +8,8 @@ import speech_recognition as sr
 
 # === 🔐 API KEYS ===
 openai.api_key = 
-ELEVENLABS_API_KEY = "sk_8d91639a929dfc2da5b6ead46801d4d7b2905b80c04855ac"
-VOICE_ID = "EXAVITQu4vr4xnSDxMaL"
-
-
+ELEVENLABS_API_KEY = "
+VOICE_ID = "EXAVITQu4vr4xnSDxMa
 
 
 # === 🎤 Listen from user ===

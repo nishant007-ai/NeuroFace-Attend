@@ -69,6 +69,16 @@ The assistant speaks back using **Text-to-Speech (TTS)** and can even be configu
 
 ---
 
+## 🛠️ Technology Stack
+
+| Layer               | Technologies                               |
+|---------------------|--------------------------------------------|
+| **Frontend**        | Streamlit                                   |
+| **Face Recognition**| dlib, face_recognition, Deep CNN Embeddings |
+| **Voice Interface** | pyttsx3 (TTS), SpeechRecognition (STT)    |
+| **Database**        | Pandas (CSV), SQLite (optionally MySQL/Postgres) |
+| **AI Models**       | Deep Convolutional Neural Networks         |
+
 ## 🖥️ **Installation**  
 
 ```bash
