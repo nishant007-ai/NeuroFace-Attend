@@ -1,4 +1,5 @@
-# 🤖 NeuroFace-Attend 🎙️ – AI/ML Face Recognition + Voice-Assisted Attendance System  
+# 🤖 NeuroFace-Attend 🎙️  
+**AI/ML-Powered Face Recognition + Voice-Assisted Attendance System**  
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue)  
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-orange)  
@@ -8,51 +9,49 @@
 
 ---
 
-## 🌐 **Live Demo**  
-
-🚀 Try it here: **[NeuroFace-Attend (Live on Render)](https://neuroface-attend-3.onrender.com)**  
-
----
-
-## 🌟 **What is NeuroFace-Attend?**
-
-**NeuroFace-Attend** is a next-generation, **AI + Machine Learning-powered Face Recognition Attendance System** with an integrated **Voice Assistant 🤖🔊** that talks back to users during attendance.  
-
-It is built for **all environments**:  
-🏫 **Schools & Colleges**  
-🏢 **Corporate Offices & Startups**  
-🏥 **Hospitals**  
-🏬 **Malls & Enterprises**  
-🏭 **Factories & Industries**  
-🏛️ **Government & Military Institutions**  
+## 🌐 Live Demo  
+🎉 Check it out live here: **[NeuroFace-Attend on Render](https://neuroface-attend-3.onrender.com)**  
 
 ---
 
-## 🚀 **Key Features**  
+## 🌟 What is NeuroFace-Attend?  
+**NeuroFace-Attend** is a **smart attendance system** that combines **AI-based face recognition** with an **interactive voice assistant**. It makes attendance tracking **fast, accurate, and interactive** for schools, offices, hospitals, or factories.  
 
-- 🔹 **AI/ML-Powered Face Recognition** – Ultra-fast & accurate detection (99% precision).  
-- 🔹 **Voice Assistant Integration 🎤** – Greets users, confirms attendance & guides fine payments.  
-- 🔹 **Duplicate Prevention** – Each user can mark attendance **only once per lecture/shift**.  
-- 🔹 **Real-Time Notifications** – Instant voice + visual feedback after attendance marking.  
-- 🔹 **Fine Clearance System** – AI calculates fines for absentees with payment proof upload.  
-- 🔹 **Voice-Controlled Search in History** – Query records by speaking **Name, Roll, or Subject**.  
-- 🔹 **Cross-Platform** – Works on Web, Desktop, Raspberry Pi & Kiosk devices.  
+**Who can use it:**  
+- 🏫 Schools & Colleges  
+- 🏢 Corporate Offices & Startups  
+- 🏥 Hospitals  
+- 🏬 Malls & Enterprises  
+- 🏭 Factories & Industries  
+- 🏛️ Government & Military Institutions  
 
 ---
 
-## 🖼️ **How It Works (With Voice Assistant)**  
+## 🚀 Key Features  
 
-1️⃣ **Voice-Guided Face Registration** – Assistant guides students/employees during registration.  
-2️⃣ **AI Recognition** – Face is scanned and matched in milliseconds.  
-3️⃣ **Voice Feedback** – Assistant speaks:  
+- 🔹 **AI-Powered Face Recognition** – Ultra-fast and highly accurate (99%+).  
+- 🔹 **Voice Assistant Integration** – Greets users, confirms attendance, and guides fine payments.  
+- 🔹 **Duplicate Prevention** – Each person can mark attendance **only once per session**.  
+- 🔹 **Real-Time Notifications** – Instant voice & visual feedback after marking attendance.  
+- 🔹 **Fine Clearance System** – Automatically calculates fines for absentees; upload payment proof.  
+- 🔹 **Voice-Controlled History Search** – Query by **Name, Roll, or Subject** using your voice.  
+- 🔹 **Cross-Platform** – Works on **Web, Desktop, Raspberry Pi, and Kiosk devices**.  
+
+---
+
+## 🖼️ How It Works  
+
+1️⃣ **Voice-Guided Face Registration** – Assistant guides users during registration.  
+2️⃣ **AI Recognition** – Scans and matches faces in milliseconds.  
+3️⃣ **Voice Feedback** – Assistant speaks messages like:  
    - `"Hello Tony! Your attendance for OOMD has been marked ✅"`  
    - `"You have already marked attendance today ❌"`  
-4️⃣ **Detailed Reporting** – Filter by **Subject, Date, Department** using **voice commands or text**.  
-5️⃣ **Fine Clearance** – Voice-guided fine payment with QR & digital proof uploads.  
+4️⃣ **Detailed Reporting** – Filter by **Subject, Date, Department** using **voice or text** commands.  
+5️⃣ **Fine Clearance** – Voice-guided fine payment with QR code and digital proof upload.  
 
 ---
 
-## 🔧 **Tech Stack**  
+## 🔧 Tech Stack  
 
 - **Frontend:** Streamlit  
 - **Face Recognition:** dlib + face_recognition  
@@ -62,20 +61,17 @@ It is built for **all environments**:
 
 ---
 
-## 🎤 **Voice Assistant Demo Commands**  
+## 🎤 Voice Assistant Demo Commands  
 
-- **Attendance:**  
-  `"Hey NeuroFace, mark my attendance"`  
-- **History Search:**  
-  `"Show me OOMD attendance for Tony"`  
-- **Fine Clearance:**  
-  `"Do I have any pending fines?"`  
+- **Attendance:** `"Hey NeuroFace, mark my attendance"`  
+- **History Search:** `"Show me OOMD attendance for Tony"`  
+- **Fine Clearance:** `"Do I have any pending fines?"`  
 
-The assistant speaks back using **Text-to-Speech (TTS)** and can even be configured for **multiple languages 🌍**.
+Assistant replies using **Text-to-Speech (TTS)** and can support **multiple languages 🌍**.
 
 ---
 
-## 🖥️ **Installation (Local Setup)**  
+## 🖥️ Installation (Local Setup)  
 
 ```bash
 # 1️⃣ Clone the Repository

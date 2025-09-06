@@ -1,7 +1,7 @@
 streamlit
-face_recognition
-numpy
+face-recognition
+dlib-bin
 opencv-python
+pillow
 pandas
-gtts
-Pillow
+gTTS
